@@ -24,8 +24,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        // Make sure your layout file is named loginpage.xml or change this
-        setContentView(R.layout.activity_main)
+         setContentView(R.layout.activity_main)
 
         auth = FirebaseAuth.getInstance()
 
@@ -43,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
              overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
 
-            // finish() // Optional: if you don't want to come back to signup on back press
+              finish() // Optional: if you don't want to come back to signup on back press
         }
 
 
@@ -65,11 +64,9 @@ class MainActivity : AppCompatActivity() {
                         // Sign in success!
                         Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
 
-                        // Add this code to navigate to MainActivity
-                        val intent = Intent(this, MainActivity::class.java)
+                         val intent = Intent(this, app_navigation::class.java)
                         startActivity(intent)
-                        finish() // This closes the login page so the user can't go back to it
-
+                       finish()
                     } else {
                         // If sign in fails, display a message to the user.
                         val errorMessage = task.exception?.message ?: "Authentication failed."

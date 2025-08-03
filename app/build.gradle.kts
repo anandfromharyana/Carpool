@@ -47,7 +47,9 @@ dependencies {
 
 
     // Make sure you have the material components library
-    implementation("com.google.android.material:material:1.12.0") // Use the latest version
+    implementation("com.google.android.material:material:1.12.0")
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx) // Use the latest version
 
     // Add Navigation Component libraries
     val navVersion = "2.7.7" // Check for the latest version

@@ -44,6 +44,7 @@ class SignUp : AppCompatActivity() {
                         Toast.makeText(this, "Account created!", Toast.LENGTH_SHORT).show()
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
+                        finish()
                     } else {
                         Toast.makeText(this, "Error: ${task.exception?.message}", Toast.LENGTH_LONG).show()
                     }
