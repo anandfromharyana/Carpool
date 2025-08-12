@@ -21,13 +21,16 @@ class app_navigation : AppCompatActivity() {
 
         val navView: BottomNavigationView = binding.navView
 
+
         val navController = findNavController(R.id.nav_host_fragment_app_navigation_activity)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
+        supportActionBar?.hide()
         val appBarConfiguration = AppBarConfiguration(
             setOf(
+
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
             )
+
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)

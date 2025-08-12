@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FAB4B4"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/tvFromTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From → To"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date and Time"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/tvSeatsPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seats • Price"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"/>
+</LinearLayout>

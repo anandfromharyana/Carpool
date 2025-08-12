@@ -6,3 +6,12 @@ plugins {
     alias(libs.plugins.kotlin.compose) apply false
 
 }
+
+// build.gradle.kts (Project-level)
+
+buildscript {
+    dependencies {
+        // Safe Args plugin
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.8.0")
+    }
+}
