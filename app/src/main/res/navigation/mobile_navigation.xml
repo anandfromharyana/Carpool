@@ -3,23 +3,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/navigation_home">
 
+    <!-- Home Fragment -->
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.anand.carpool.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
 
+        <!-- Action to navigate to Search Results -->
+        <action
+            android:id="@+id/action_homeFragment_to_searchResultsFragment"
+            app:destination="@id/searchResultsFragment" />
+    </fragment>
+
+    <!-- Dashboard Fragment -->
     <fragment
         android:id="@+id/navigation_dashboard"
         android:name="com.anand.carpool.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" />
 
+    <!-- Notifications Fragment -->
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.anand.carpool.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <!-- Create Ride Fragment - FIXED PACKAGE NAME -->
+    <fragment
+        android:id="@+id/createRideFragment"
+        android:name="com.anand.carpool.ui.create.CreateRideFragment"
+        android:label="Create Ride"
+        tools:layout="@layout/fragmet_create_ride" />
+
+    <!-- Search Results Fragment - REMOVED SAFE ARGS FOR SIMPLICITY -->
+    <fragment
+        android:id="@+id/searchResultsFragment"
+        android:name="com.anand.carpool.ui.search.SearchResultsFragment"
+        android:label="Search Results"
+        tools:layout="@layout/fragment_search_results" />
+
 </navigation>
